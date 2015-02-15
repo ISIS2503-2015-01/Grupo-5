@@ -30,16 +30,16 @@ public class Paciente extends Model {
 	papipupepo
 	*/
 
+
+    /*
+    Lllolo!
+     */
+
 	/*
 	Costructor; el paciente debe introducir sus datos personales, para con ello ser visible para un doctor.
 	*/
 	public Paciente(String cedula, String nombre, String apellido, String genero, int edad){
-		this.cedula = cedula;
-		this.nombre = nombre;
-		this.apellido = apellido;
-		this.genero = genero;
-		this.edad = edad;
-		this.episodios = new ArrayList();
+
 	}
 
 
