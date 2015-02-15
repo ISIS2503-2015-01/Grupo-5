@@ -7,6 +7,10 @@ import javax.persistence.Id;
 @Entity
 public class Episodio extends Model {
 
+
+	/*
+	Atributos
+	*/
 	@Id
 	public String id;
 
@@ -19,5 +23,9 @@ public class Episodio extends Model {
 	public String descipción;
 
 	
+	/*
+	Constructor
+	*/
+	public Episodio()
 
 }
