@@ -42,38 +42,67 @@ public class Paciente extends Model {
 	/*
 	Métodos
 	*/
+
+
+	/*
+	Regresa el nombre
+	*/
 	public String darNomnre(){
 		return nombre;
 	}
 
+	/*
+	Regresa el apellido
+	*/
 	public String darApellido(){
 		return apellido;
 	}
 
+	/*
+	Regresa el género
+	*/
 	public String darGenero(){
 		return genero;
 	}
 
+	/*
+	Regresa la edad
+	*/
 	public int darEdad(){
 		return edad;
 	}
 
+	/*
+	Regresa los episodios
+	*/
 	public ArrayList darEpisodios(){
 		return episodios;
 	}
 
+	/*
+	Regresa la cédula
+	*/
 	public String darCedula(){
 		return cedula;
 	}
 
+	/*
+	Cambia el nombre
+	*/
 	public void setNombre(String nombre){
 		this.nombre = nombre;
 	}
 
+	/*
+	Cambia el apellido
+	*/
 	public void setApellido(String apellido){
 		this.apellido = apellido;
 	}
 
+	/*
+	Cambia la edad
+	*/
 	public void setEdad(int edad){
 		this.edad = edad;
 	}
