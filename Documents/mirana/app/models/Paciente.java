@@ -38,7 +38,9 @@ public class Paciente extends Model {
 	/*
 	Costructor; el paciente debe introducir sus datos personales, para con ello ser visible para un doctor.
 	*/
-	public Paciente(String cedula, String nombre, String apellido, String genero, int edad){
+	public Paciente(String cedula, String nombre, String apellido, String genero, int edad)
+    {
+
 
 	}
 
