@@ -30,5 +30,9 @@ public class Doctor extends Model {
 		return nombre;
 	}
 
+	public String darApellido(){
+		return apellido;
+	}
+
 
 }

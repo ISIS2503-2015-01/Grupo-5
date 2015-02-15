@@ -42,4 +42,24 @@ public class Paciente extends Model {
 		return nombre;
 	}
 
+	public String darApellido(){
+		return apellido;
+	}
+
+	public String darGenero(){
+		return genero;
+	}
+
+	public int darEdad(){
+		return edad;
+	}
+
+	public ArrayList darEpisodios(){
+		return episodios;
+	}
+
+	public String darCedula(){
+		return cedula;
+	}
+
 }
