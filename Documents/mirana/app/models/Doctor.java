@@ -30,18 +30,31 @@ public class Doctor extends Model {
 	/*
 	Métodos
 	*/
+
+	/*
+	Regresa el nombre
+	*/
 	public String darNombre(){
 		return nombre;
 	}
 
+	/*
+	Regresa el apellidoPc
+	*/
 	public String darApellido(){
 		return apellido;
 	}
 
+	/*
+	Cambia el nombre
+	*/
 	public void setNombre(String nombre){
 		this.nombre = nombre;
 	}
 
+	/*
+	Cambia el apellido
+	*/
 	public void setApellido(String apellido){
 		this.apellido = apellido;
 	}

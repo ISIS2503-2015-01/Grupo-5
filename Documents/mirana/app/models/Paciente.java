@@ -29,15 +29,19 @@ public class Paciente extends Model {
 	/*
 	Costructor; el paciente debe introducir sus datos personales, para con ello ser visible para un doctor.
 	*/
-	public Paciente(String cedulaa, String nombree, String apellidoo, String generoo, int edadd){
-		this.cedula = cedulaa;
-		this.nombre = nombree;
-		this.apellido = apellidoo;
-		this.genero = generoo;
-		this.edad = edadd;
+	public Paciente(String cedula, String nombre, String apellido, String genero, int edad){
+		this.cedula = cedula;
+		this.nombre = nombre;
+		this.apellido = apellido;
+		this.genero = genero;
+		this.edad = edad;
 		this.episodios = new ArrayList();
 	}
 
+
+	/*
+	Métodos
+	*/
 	public String darNomnre(){
 		return nombre;
 	}
@@ -60,6 +64,18 @@ public class Paciente extends Model {
 
 	public String darCedula(){
 		return cedula;
+	}
+
+	public void setNombre(String nombre){
+		this.nombre = nombre;
+	}
+
+	public void setApellido(String apellido){
+		this.apellido = apellido;
+	}
+
+	public void setEdad(int edad){
+		this.edad = edad;
 	}
 
 }
