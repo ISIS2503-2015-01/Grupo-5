@@ -12,7 +12,6 @@ public class Catalizadores extends Model {
 
 	public String nombre;
 
-
 	
 
 }

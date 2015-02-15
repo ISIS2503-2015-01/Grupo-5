@@ -7,6 +7,9 @@ import javax.persistence.Id;
 @Entity
 public class Doctor extends Model {
 
+	/*
+	Atributos
+	*/
 	@Id
 	public String id;
 
@@ -14,6 +17,18 @@ public class Doctor extends Model {
 
 	public String apellido;
 
-	
+
+	/*
+	Constructor; se deben pasar nombre y apellido del doctor como parámetro.
+	*/
+	public Doctor(String nombree, String apellidoo){
+		this.nombre = nombree;
+		this.apellido = apellidoo;
+	}
+
+	public String darNombre(){
+		return nombre;
+	}
+
 
 }
