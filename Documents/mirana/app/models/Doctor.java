@@ -10,9 +10,6 @@ public class Doctor extends Model {
 	@Id
 	public String id;
 
-
-
-
-	
+    public String dia;
 
 }
