@@ -21,11 +21,15 @@ public class Doctor extends Model {
 	/*
 	Constructor; se deben pasar nombre y apellido del doctor como parámetro.
 	*/
-	public Doctor(String nombree, String apellidoo){
-		this.nombre = nombree;
-		this.apellido = apellidoo;
+	public Doctor(String nombre, String apellido){
+		this.nombre = nombre;
+		this.apellido = apellido;
 	}
 
+
+	/*
+	Métodos
+	*/
 	public String darNombre(){
 		return nombre;
 	}
@@ -34,5 +38,12 @@ public class Doctor extends Model {
 		return apellido;
 	}
 
+	public void setNombre(String nombre){
+		this.nombre = nombre;
+	}
+
+	public void setApellido(String apellido){
+		this.apellido = apellido;
+	}
 
 }
