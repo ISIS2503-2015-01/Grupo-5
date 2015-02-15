@@ -10,9 +10,8 @@ public class Doctor extends Model {
 	@Id
 	public String id;
 
-	public String nombre;
 
-	public String apellido;
+
 
 	
 
