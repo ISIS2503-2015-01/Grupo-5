@@ -1,4 +1,4 @@
-3package models;
+﻿3package models;
 
 import play.db.ebean.Model;
 import javax.persistence.Entity;
@@ -25,6 +25,10 @@ public class Paciente extends Model {
 
 	public String cedula;
 
+	
+	/*
+	papipupepo
+	*/
 
 	/*
 	Costructor; el paciente debe introducir sus datos personales, para con ello ser visible para un doctor.
