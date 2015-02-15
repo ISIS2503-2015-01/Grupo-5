@@ -40,7 +40,11 @@ public class Paciente extends Model {
 	*/
 	public Paciente(String cedula, String nombre, String apellido, String genero, int edad)
     {
-
+        this.cedula= cedula;
+        this.nombre= nombre;
+        this.apellido= apellido;
+        this.genero= genero;
+        this.edad= edad;
 
 	}
 
