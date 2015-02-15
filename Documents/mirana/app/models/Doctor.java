@@ -1,4 +1,4 @@
-3package models;
+﻿3package models;
 
 import play.db.ebean.Model;
 import javax.persistence.Entity;
@@ -12,10 +12,15 @@ public class Doctor extends Model {
 	*/
 	@Id
 	public String id;
+	
+	/*
+	lalala
+	*/
 
-	public String nombre;
+	/*
+	El Doctor es muy feo
+	*/
 
-	public String apellido;
 
 
 	/*
