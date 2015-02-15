@@ -13,15 +13,6 @@ public class Doctor extends Model {
 	@Id
 	public String id;
 	
-	/*
-	lalala
-	*/
-
-	/*
-	El Doctor es muy feo
-	*/
-
-
 
 	/*
 	Constructor; se deben pasar nombre y apellido del doctor como parámetro.
