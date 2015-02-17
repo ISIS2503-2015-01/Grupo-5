@@ -57,4 +57,12 @@ public class Catalizadores extends Model {
 		this.nombre = nuevo;
 	}
 
+	public String darMedicamento(){
+		return medicamento;
+	}
+
+	public void cambiarMedicamento( String nuevo){
+		this.medicamento = nuevo;
+	}
+
 }
