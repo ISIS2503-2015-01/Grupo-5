@@ -57,12 +57,4 @@ public class Catalizadores extends Model {
 		this.nombre = nuevo;
 	}
 
-		public String darNombre(){
-		return nombre;
-	}
-
-	public void cambiarNombre(String nuevo){
-		this.nombre = nuevo;
-	}
-
 }
