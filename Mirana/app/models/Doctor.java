@@ -1,8 +1,9 @@
-﻿3package models;
+﻿package models;
 
 import play.db.ebean.Model;
 import javax.persistence.Entity;
 import javax.persistence.Id;
+import play.db.ebean.Model;
 
 @Entity
 public class Doctor extends Model {
@@ -12,14 +13,16 @@ public class Doctor extends Model {
 	*/
 	@Id
 	public String id;
+    public String name;
+    public String apellido;
 	
 
 	/*
 	Constructor; se deben pasar nombre y apellido del doctor como parámetro.
 	*/
 	public Doctor(String nombre, String apellido){
-		this.nombre = nombre;
-		this.apellido = apellido;
+        nombre = nombre;
+		apellido = apellido;
 	}
 
 
