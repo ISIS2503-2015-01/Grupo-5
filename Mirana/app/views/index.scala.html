@@ -2,13 +2,19 @@
 
 @main("Welcome to Play") {
 
-    @play20.welcome(message, style = "Java")
+    @message
+<h1>Agregar nuevo paciente</h1>
+<form action="@routes.pacientesController.addPaciente()" method="post">
+    <input type="text" name="nombre">
+    <input type="text" name="apellido">
+    <input type="text" name="genero">
+    <input type="text" name="fechaNacimiento">
+    <input type="text" name="documentoIdentidad">
+    <input type="text" name="tipoDocumentoIdentidad">
+    <input type="text" name="email">
 
-<form action="@routes.Application.addPerson()" method="post">
-    <input type="text" name="name">
-    <input type="text" apellido="apellido">
-    <button> Agregar doctor </button>
 
+    <button> Agregar paciente </button>
 </form>
 
 }
