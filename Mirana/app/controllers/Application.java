@@ -1,12 +1,15 @@
 package controllers;
 
-import play.*;
-import play.mvc.*;
 import models.Doctor;
+import play.*;
 import play.data.Form;
+import play.db.ebean.Model;
+import play.mvc.*;
 
+import javax.xml.transform.Result;
+import java.util.List;
 
-import views.html.*;
+import static play.libs.Json.toJson;
 
 public class Application extends Controller {
 
@@ -21,6 +24,10 @@ public class Application extends Controller {
         return redirect(routes.Application.index());
     }
 
-    
+    public static Result get_Doctors()
+    {
+        List<Doctor> doctores= new Model.Finder(String.class, Doctor.class).all();
+        return ok(toJson(doctores));
+    }
 
 }
