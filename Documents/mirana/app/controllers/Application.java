@@ -31,4 +31,11 @@ public class Application extends Controller {
     	List<Person> persons = new Model.Finder(String.class, Person.class).all();
     	return ok(toJson(persons));
     }
+
+    public static addEpisodio()
+    {
+        Episodio epi = Form.form(Episodio.class).bindFromRequest.get();
+        epi.save();
+        return redirect(routes.Application.index);
+    }
 }
