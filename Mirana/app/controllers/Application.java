@@ -17,7 +17,6 @@ public class Application extends Controller {
         return ok(index.render("Your new application is ready."));
     }
 
-
     public static Result addDoctor(){
         Doctor doctor = Form.form(Doctor.class).bindFromRequest().get();
         doctor.save();
