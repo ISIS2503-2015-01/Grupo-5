@@ -3,7 +3,6 @@ package models;
 import play.db.ebean.Model;
 import javax.persistence.Entity;
 import javax.persistence.Id;
-import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
@@ -56,6 +55,7 @@ public class Catalizadores extends Model {
 	/* 
 	Episodio asociado a el catalizador
 	*/
+	@OneToOne
 	private Long episodioID;
 
 	//-------------------------------------
