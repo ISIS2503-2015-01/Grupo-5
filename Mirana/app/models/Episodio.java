@@ -28,7 +28,7 @@ public class Episodio extends Model {
 	@GeneratedValue(strategy= GenerationType.IDENTITY)
 	public long id;
 
-	public String idPaciente;
+	public Long idPaciente;
 
 	public Paciente paciente;
 
@@ -44,10 +44,10 @@ public class Episodio extends Model {
 	/*
 	Constructor
 	*/
-	public Episodio(String pId, Paciente pPaciente, Date pFecha, int pIntensidad, String pDescripcion, String pLugar)
+	public Episodio(String pId, Long pPaciente, Date pFecha, int pIntensidad, String pDescripcion, String pLugar)
 	{
 		//id = pId;
-		paciente = pPaciente;
+		idPaciente = pPaciente;
 		fecha = pFecha;
 		intensidad = pIntensidad;
 		descipción = pDescripcion;
@@ -61,12 +61,12 @@ public class Episodio extends Model {
 		return id;
 	}
 
-	public Paciente getPaciente()
+	public Long getIdPaciente()
 	{
 		return paciente;
 	}
 
-	public void setPaciente(Paciente pPaciente)
+	public void setIdPaciente(Long pPaciente)
 	{
 		paciente = pPaciente;
 	}

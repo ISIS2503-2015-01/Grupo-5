@@ -21,6 +21,13 @@ public class Application extends Controller {
         return redirect(routes.Application.index());
     }
 
+    public static addEpisodio()
+    {
+        Episodio epi = Form.form(Episodio.class).bindFromRequest.get();
+        epi.save();
+        return redirect(routes.Application.index);
+    }
+
     
 
 }
