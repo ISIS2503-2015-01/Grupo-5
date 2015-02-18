@@ -1,120 +1,175 @@
-﻿package models;
+package models;
 
 import play.db.ebean.Model;
+
 import javax.persistence.Entity;
 import javax.persistence.Id;
 
+/**
+ * Created by USUARIO on 17/02/2015.
+ */
+
 @Entity
-public class Paciente extends Model {
+/**
+ * Modela a un paciente.  Es una POJO(clase de java que solo tiene getters, setters y un constructor)
+ */
+public class Paciente extends Model
+{
+    //---------------------------------------------------------------------
+    // Constantes
+    //---------------------------------------------------------------------
 
-	/*
-	Atributos
-	*/
-	@Id
-	public String id;
-
-	public String nombre;
-
-	public String apellido;
-
-	public String genero;
-
-	public int edad;
-
-	public ArrayList episodios;
-
-	public String cedula;
-
-	
-	/*
-	papipupepo
-	*/
-
-
-    /*
-    Lllolo! hoooooo
+    /**
+     * Constante que representa el género masculino
      */
+    public static final int MASCULINO = 1;
 
-	/*
-	Costructor; el paciente debe introducir sus datos personales, para con ello ser visible para un doctor.
-	*/
-	public Paciente(String cedula, String nombre, String apellido, String genero, int edad)
+    /**
+     * Constante que representa el género femenino
+     */
+    public static final int FEMENINO= 2;
+
+
+    //---------------------------------------------------------------------
+    // Atributos
+    //---------------------------------------------------------------------
+
+    /**
+     * Identificación única del paciente dentro del sistema
+     */
+    @Id
+    private String id;
+
+    /**
+     * El nombre del paciente.
+     */
+    private String nombre;
+
+    /**
+     * El apellido del paciente.
+     */
+    private String apellido;
+
+    /**
+     * El género del paciente.
+     */
+    private String genero;
+
+    /**
+     * String que representa la fecha de nacimiento del paciente.
+     */
+    private String fechaNacimiento;
+
+    /**
+     * El número de documento de identidad del paciente.
+     */
+    private String documentoIdentidad;
+
+    /**
+     * El tipo de documento de identidad del paciente.
+     */
+    private String tipoDocumentoIdentidad;
+
+    /**
+     * El correo electrónico del paciente.
+     */
+    private String email;
+
+
+    //---------------------------------------------------------------------
+    // Constructor
+    //---------------------------------------------------------------------
+
+    public Paciente(String nombreP, String apellidoP, String generoP, String fechaNacimientoP, String documentoIdentidadP, String tipoDocumentoIdentidadP, String emailP)
     {
-        this.cedula= cedula;
-        this.nombre= nombre;
-        this.apellido= apellido;
-        this.genero= genero;
-        this.edad= edad;
-
-	}
-
-
-	/*
-	Métodos
-	*/
+        nombre=nombreP;
+        apellido=apellidoP;
+        genero=generoP;
+        fechaNacimiento=fechaNacimientoP;
+        documentoIdentidad=documentoIdentidadP;
+        tipoDocumentoIdentidad=tipoDocumentoIdentidadP;
+        email=emailP;
+    }
 
 
-	/*
-	Regresa el nombre
-	*/
-	public String darNomnre(){
-		return nombre;
-	}
+    //---------------------------------------------------------------------
+    // Getters
+    //---------------------------------------------------------------------
 
-	/*
-	Regresa el apellido
-	*/
-	public String darApellido(){
-		return apellido;
-	}
+    public String getNombre()
+    {
+        return nombre;
+    }
 
-	/*
-	Regresa el género
-	*/
-	public String darGenero(){
-		return genero;
-	}
+    public String getApellido()
+    {
+        return apellido;
+    }
 
-	/*
-	Regresa la edad
-	*/
-	public int darEdad(){
-		return edad;
-	}
+    public String getGenero()
+    {
+        return genero;
+    }
 
-	/*
-	Regresa los episodios
-	*/
-	public ArrayList darEpisodios(){
-		return episodios;
-	}
+    public String getDocumentoIdentidad()
+    {
+        return documentoIdentidad;
+    }
 
-	/*
-	Regresa la cédula
-	*/
-	public String darCedula(){
-		return cedula;
-	}
+    public String getTipoDocumentoIdentidad()
+    {
+        return tipoDocumentoIdentidad;
+    }
 
-	/*
-	Cambia el nombre
-	*/
-	public void setNombre(String nombre){
-		this.nombre = nombre;
-	}
+    public String getFechaNacimiento()
+    {
+        return fechaNacimiento;
+    }
 
-	/*
-	Cambia el apellido
-	*/
-	public void setApellido(String apellido){
-		this.apellido = apellido;
-	}
+    public String getEmail()
+    {
+        return email;
+    }
 
-	/*
-	Cambia la edad
-	*/
-	public void setEdad(int edad){
-		this.edad = edad;
-	}
+
+    //---------------------------------------------------------------------
+    // Setters
+    //---------------------------------------------------------------------
+
+    public void setNombre(String nombreP)
+    {
+         nombre = nombreP;
+    }
+
+    public void setApellido(String apellidoP)
+    {
+        this.apellido = apellidoP;
+    }
+
+    public void setGenero(String genero)
+    {
+        this.genero = genero;
+    }
+
+    public void setDocumentoIdentidad(String documentoIdentidad)
+    {
+        this.documentoIdentidad = documentoIdentidad;
+    }
+
+    public void setEmail(String email)
+    {
+        this.email = email;
+    }
+
+    public void setFechaNacimiento(String fechaNacimiento)
+    {
+        this.fechaNacimiento = fechaNacimiento;
+    }
+
+    public void setTipoDocumentoIdentidad(String tipoDocumentoIdentidad)
+    {
+        this.tipoDocumentoIdentidad = tipoDocumentoIdentidad;
+    }
+
 
 }
