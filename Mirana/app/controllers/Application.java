@@ -36,18 +36,16 @@ public class Application extends Controller {
         Doctor doctor = Form.form(Doctor.class).bindFromRequest().get();
         doctor.save();
         return redirect(routes.Application.index());
-}
+    }
 
-    public static Result get_Doctors()
-    {
+    public static Result get_Doctors(){
         List<Doctor> doctores= new Model.Finder(String.class, Doctor.class).all();
         return ok(toJson(doctores));
     }
 
 
 
-    public static Result deleteDoctor()
-    {
+    public static Result deleteDoctor(){
 
         String id="4";
         Doctor.find.ref(id).delete();

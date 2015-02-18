@@ -3,7 +3,6 @@ package models;
 import play.db.ebean.Model;
 import javax.persistence.Entity;
 import javax.persistence.Id;
-
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
@@ -25,9 +24,9 @@ public class Catalizadores extends Model {
     private Long id;
 
     /*
-    Nombre asociado al catalizador
+    idCatalizador asociado al catalizador
     */
-	public String nombre;
+	public Long idCatalizador;
 
 	/*
 	Medicamento que se debe tomar para aliviar los sintomas
@@ -72,7 +71,7 @@ public class Catalizadores extends Model {
 
 	/*
 	Constructor con parámetros:
-	nombree: el nombre del catalizador
+	idCatalizadorr: el idCatalizador del catalizador
 	medicamentoo: el medicamento asociado 
 	alternativoo: el tratamiento alternativo propuesta
 	reposoo: si se debe descansar
@@ -81,11 +80,11 @@ public class Catalizadores extends Model {
 	episodioid: el episodio con el que esta conectado el catalizador
 	Retorna el nuevo catalizador
 	*/
-	public static Catalizadores crear( String nombree, String medicamentoo, String alternativoo, boolean reposoo, boolean dietaa, boolean terapiaa, Long episodioid){
+	public static Catalizadores crear(Long idCatalizadorr, String medicamentoo, String alternativoo, boolean reposoo, boolean dietaa, boolean terapiaa, Long episodioid){
 
 	Catalizadores catalizador = new Catalizadores();
 
-	catalizador.nombre = nombree;
+	catalizador.idCatalizador = idCatalizadorr;
 	catalizador.medicamento = medicamentoo;
 	catalizador.alternativo = alternativoo;
 	catalizador.reposo = reposoo;
@@ -101,17 +100,17 @@ public class Catalizadores extends Model {
 	//-------------------------------------
 
 	/*
-	Retorna el nombre del catalizador
+	Retorna el idCatalizador del catalizador
 	*/
-	public String darNombre(){
-		return nombre;
+	public Long daridCatalizador(){
+		return idCatalizador;
 	}
 
 	/*
-	Cambia el nombre del catalizador
+	Cambia el idCatalizador del catalizador
 	*/
-	public void cambiarNombre(String nuevo){
-		this.nombre = nuevo;
+	public void cambiaridCatalizador(String nuevo){
+		this.idCatalizador = nuevo;
 	}
 
 	/*
