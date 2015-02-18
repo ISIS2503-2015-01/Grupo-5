@@ -4,6 +4,19 @@ import play.db.ebean.Model;
 import javax.persistence.Entity;
 import javax.persistence.Id;
 
+
+import java.text.*;
+import java.util.*;
+
+import static java.lang.annotation.ElementType.*;
+import static java.lang.annotation.RetentionPolicy.*;
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
+import javax.persistence.Id;
+
+import java.lang.annotation.*;
+
 @Entity
 public class Episodio extends Model {
 
@@ -31,7 +44,7 @@ public class Episodio extends Model {
 	/*
 	Constructor
 	*/
-	public Episodio(String pId, Paciente pPaciente, Date pFecha, int pIntensidad, String pDescripcion, String pLugar )
+	public Episodio(String pId, Paciente pPaciente, Date pFecha, int pIntensidad, String pDescripcion, String pLugar)
 	{
 		//id = pId;
 		paciente = pPaciente;
@@ -43,7 +56,7 @@ public class Episodio extends Model {
 	}
 
 
-	public String getId()
+	public long getId()
 	{
 		return id;
 	}
@@ -53,7 +66,7 @@ public class Episodio extends Model {
 		return paciente;
 	}
 
-	public void setPaciente(pPaciente)
+	public void setPaciente(Paciente pPaciente)
 	{
 		paciente = pPaciente;
 	}
@@ -83,7 +96,7 @@ public class Episodio extends Model {
 		return descipción;
 	}
 
-	public void setDescripcion(Sitring pDesc)
+	public void setDescripcion(String pDesc)
 	{
 		descipción = pDesc;
 	}

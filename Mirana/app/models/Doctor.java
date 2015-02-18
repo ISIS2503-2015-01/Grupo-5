@@ -1,61 +1,63 @@
-﻿package models;
-
-import play.db.ebean.Model;
+package models;
 import javax.persistence.Entity;
 import javax.persistence.Id;
 import play.db.ebean.Model;
 
+/**
+ * Created by Andre Navas on 17/02/2015.
+ */
 @Entity
 public class Doctor extends Model {
 
-	/*
+    /*
 	Atributos
 	*/
-	@Id
-	public String id;
+    @Id
+    public String id;
     public String name;
     public String apellido;
-	
 
-	/*
-	Constructor; se deben pasar nombre y apellido del doctor como parámetro.
-	*/
-	public Doctor(String nombre, String apellido){
+
+    /*
+    Constructor; se deben pasar nombre y apellido del doctor como parámetro.
+    */
+    public Doctor(String nombre, String apellido){
         name = nombre;
-		apellido = apellido;
-	}
+        apellido = apellido;
+    }
 
 
-	/*
+    /*
 	Métodos
 	*/
 
-	/*
-	Regresa el nombre
-	*/
-	public String darNombre(){
-		return name;
-	}
+    /*
+    Regresa el nombre
+    */
+    public String darNombre(){
+        return name;
+    }
 
-	/*
-	Regresa el apellidoPc
-	*/
-	public String darApellido(){
-		return apellido;
-	}
+    /*
+    Regresa el apellidoPc
+    */
+    public String darApellido(){
+        return apellido;
+    }
 
-	/*
-	Cambia el nombre
-	*/
-	public void setNombre(String nombre){
-		name = nombre;
-	}
+    /*
+    Cambia el nombre
+    */
+    public void setNombre(String nombre){
+        name = nombre;
+    }
 
-	/*
-	Cambia el apellido
-	*/
-	public void setApellido(String apellido){
-		apellido = apellido;
-	}
+    /*
+    Cambia el apellido
+    */
+    public void setApellido(String apellido){
+        apellido = apellido;
+    }
+
 
 }

@@ -4,6 +4,12 @@ import play.db.ebean.Model;
 import javax.persistence.Entity;
 import javax.persistence.Id;
 
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
+import javax.persistence.Id;
+
+
 @Entity
 public class Catalizadores extends Model {
 
@@ -16,7 +22,7 @@ public class Catalizadores extends Model {
 	*/
     @Id
     @GeneratedValue(strategy=GenerationType.IDENTITY)
-    private Long id;
+    private int id;
 
     /*
     Nombre asociado al catalizador
