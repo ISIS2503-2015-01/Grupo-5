@@ -12,3 +12,8 @@ libraryDependencies ++= Seq(
   cache,
   javaWs
 )
+
+val appDependencies = Seq(
+   "org.hibernate" % "hibernate-entitymanager" % "4.3.6.Final",
+)
+
