@@ -12,8 +12,12 @@ POST    /paciente                   controllers.Pacientes.addPaciente()
 GET     /paciente                   controllers.pacientes.getPacientes()
 DELETE  /paciente/{id}              controllers.pacientes.deletePacientes()
 
+POST    /episodio                   controllers.ControladorEpisodio.addEpisodio()
+GET     /allEpisodio                controllers.ControladorEpisodio.getEpisodio()
+DELETE  /menosEpisodio/{id}         controllers.ControladorEpisodio.deleteEpisodio()
+
+
 # Map static resources from the /public folder to the /assets URL path
 GET     /assets/*file               controllers.Assets.at(path="/public", file)
 
-POST    /episodio                    controllers.Application.addEpisodio()
 

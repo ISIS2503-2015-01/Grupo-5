@@ -18,6 +18,15 @@
 
 </form>
 
+<h1>Episodios</h1>
+<form action="@routes.ControladorEpisodios.addEpisodio()" method="post">
+    <input type="text" name="descripcion">
+    <input type="text" name="intencidad">
+    <input type="text" name="lugar">
+    <button> Agregar episodio </button>
+</form>
+
+
 <h1>Pacientes</h1>
 <form action="@routes.pacientesController.addPaciente()" method="post">
 <input type="text" name="nombre">
