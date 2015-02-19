@@ -12,10 +12,18 @@ POST    /paciente                   controllers.Pacientes.addPaciente()
 GET     /paciente                   controllers.pacientes.getPacientes()
 DELETE  /paciente/{id}              controllers.pacientes.deletePacientes()
 
+<<<<<<< Updated upstream
 POST    /episodio                   controllers.ControladorEpisodio.addEpisodio()
 GET     /allEpisodio                controllers.ControladorEpisodio.getEpisodio()
 DELETE  /menosEpisodio/{id}         controllers.ControladorEpisodio.deleteEpisodio()
 
+=======
+GET     /                           		controllers.ControladorCatalizadores.index()
+POST	/episodio/catalizador				controllers.ControladorCatalizadores.crear(id: Long)
+PUT		/episodio/catalizador 				controllers.ControladorCatalizadores.actualizar(id: Long)
+DELETE 	/episodio/catalizador 				controllers.ControladorCatalizadores.borrar(id: Long, id2:Long)
+GET 	paciente/episodio/catalizador 		controllers.ControladorCatalizadores.darPaciente(id: Long)
+>>>>>>> Stashed changes
 
 # Map static resources from the /public folder to the /assets URL path
 GET     /assets/*file               controllers.Assets.at(path="/public", file)
