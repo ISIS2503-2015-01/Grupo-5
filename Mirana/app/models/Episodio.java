@@ -1,21 +1,12 @@
 package models;
 
 import play.db.ebean.Model;
-import javax.persistence.Entity;
-import javax.persistence.Id;
 
-
-import java.text.*;
-import java.util.*;
-
-import static java.lang.annotation.ElementType.*;
-import static java.lang.annotation.RetentionPolicy.*;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
-
-import java.lang.annotation.*;
+import java.util.Date;
 
 @Entity
 public class Episodio extends Model {
@@ -39,6 +30,8 @@ public class Episodio extends Model {
 	public String descipción;
 
 	public String lugar;
+
+    public String catalizador;
 
 	
 	/*

@@ -22,7 +22,7 @@ public class Catalizadores extends Model {
 	*/
     @Id
     @GeneratedValue(strategy=GenerationType.IDENTITY)
-    private int id;
+    private Long id;
 
     /*
     Nombre asociado al catalizador
@@ -81,7 +81,7 @@ public class Catalizadores extends Model {
 	episodioid: el episodio con el que esta conectado el catalizador
 	Retorna el nuevo catalizador
 	*/
-	public static Catalizadores create( String nombree, String medicamentoo, String alternativoo, boolean reposoo, boolean dietaa, boolean terapiaa, Long episodioid){
+	public static Catalizadores crear( String nombree, String medicamentoo, String alternativoo, boolean reposoo, boolean dietaa, boolean terapiaa, Long episodioid){
 
 	Catalizadores catalizador = new Catalizadores();
 
