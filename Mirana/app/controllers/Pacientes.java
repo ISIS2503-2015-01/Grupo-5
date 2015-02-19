@@ -20,4 +20,10 @@ public class pacientesController extends Controller
 		List<Paciente> pacientes= new Model.Finder(String.class, Paciente.class).all();
 		return ok(toJson(pacientes));
 	}
-}
+	
+	 public static Result deletePaciente()
+	 {
+		String id="1";
+		Paciente.find.ref(id).delete();
+		return redirect(routes.Application.index());
+	}
