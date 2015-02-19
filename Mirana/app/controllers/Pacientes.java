@@ -14,4 +14,10 @@ public class pacientesController extends Controller
 		paciente.save();
 		return redirect(routes.Application.index());
 	}
+	
+	public static Result getPacientes()
+	{
+		List<Paciente> pacientes= new Model.Finder(String.class, Paciente.class).all();
+		return ok(toJson(pacientes));
+	}
 }
