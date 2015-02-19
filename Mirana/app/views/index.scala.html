@@ -4,6 +4,7 @@
 
     @play20.welcome(message, style = "Java")
 
+<h1> Doctores</h1>
 <form action="@routes.Application.addDoctor()" method="post">
     <input type="text" name="name">
     <input type="text" apellido="apellido">
@@ -11,13 +12,29 @@
 
 </form>
 
-    <form method="POST" action="@routes.Application.addEpisodio()">
-        <input type="text" name="Fecha"/>
-        <input type="text" name="Intensidad"/>
-        <input type="text" name="Descripcion"/>
-        <input type="text" name="Lugar"/>
-        <button>Agregar Episodio,auqniefaltaIDPERSONA</button>
-    </form>
+<form action="@routes.Application.deleteDoctor()" method="post">
+    <input type="text" id="id">
+    <button> Eliminar doctor </button>
+
+</form>
+
+<h1>Pacientes</h1>
+<form action="@routes.pacientesController.addPaciente()" method="post">
+<input type="text" name="nombre">
+<input type="text" name="apellido">
+<input type="text" name="genero">
+<input type="text" name="fechaNacimiento">
+<input type="text" name="documentoIdentidad">
+<input type="text" name="tipoDocumentoIdentidad">
+<input type="text" name="email">
+<button> Agregar paciente </button>
+</form>
+
+<form action="@routes.pacientesController.deletePaciente()" method="delete">
+<input type="text" id="id">
+<button> Eliminar paciente </button>
+
+
 
 
 }
